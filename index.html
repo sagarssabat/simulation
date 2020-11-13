@@ -1114,7 +1114,7 @@
             console.log(ans);
 
             document.querySelector("#ball circle").setAttribute("r", volumeOfSphere);
-            var dropHeight = 157;
+            let dropHeight = 157;
 
             if (ans >= volumeOfSphere) {
                 dropHeight = 472 - (volumeOfSphere - 100)
@@ -1122,7 +1122,7 @@
                 dropHeight = ((157 - (volumeOfSphere - 100)) + (ans * 2))
             }
 
-            var t1 = gsap.timeline();
+            const t1 = gsap.timeline();
             t1.to("#ball", { y: dropHeight, duration: 2 });
             t1.to(".cls-42", { scaleY: 5, transformOrigin: "0% 100%" });
         })
