@@ -29,7 +29,7 @@
             </div>
             <div class="form-wrap">
                 <div class="form-group">
-                    <label for="slectSolid">Example solid</label>
+                    <label for="slectSolid">select solid</label>
                     <select class="form-control" id="selectSolid">
                         <option value="0.7">Birchwood (0.7)</option>
                         <option value="2.7">Aluminium (2.7)</option>
@@ -1045,7 +1045,7 @@
 
             document.querySelector("#Layer_5 circle").setAttribute("r", volumeOfSphere);
             let dropHeight = 157;
-
+            // debugger
             if (ans >= volumeOfSphere) {
                 dropHeight = 472 - (volumeOfSphere - 100)
             } else {
@@ -1054,7 +1054,7 @@
 
             const t1 = gsap.timeline();
             t1.to("#Layer_5", { y: dropHeight, duration: 2 });
-            t1.to(".cls-31", { y: -calcPercent(ans, volumeOfSphere * densityOfLiquid)}, 1);
+            t1.to(".cls-31", { y: -(ans > volumeOfSphere ? 100 : ans)}, 1);
         })
     </script>
 </body>
