@@ -1,6 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Tahoma, sans-serif;
+}
 
 .sims-component{
-    max-width: 700px;
+    .sims-row{
+        @include flexbox();
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    .col-6{
+        width: 50%;
+        padding: 0 15px;
+    }
 }
 
 .mx-auto{
